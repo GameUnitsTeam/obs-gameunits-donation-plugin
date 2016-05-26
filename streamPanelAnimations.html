@@ -32,18 +32,28 @@
 				font-size: 24px;
 				}
 			#reminderContent {
-				width: 800px;
-				height: 940px;
-				background: #2e5794;
+				width: 400px;
+				height: 240px;
+				background: #999999;
 				position: relative;
 				overflow: hidden;
-				color: white;
+				color: black;
 				}
 			#twitchLogo {
 				width: 90px;
 				height: 90px;
 				float: left;
 				}
+			.container {
+				width: 100px;
+				height:100px;
+			}
+
+			/* resize images */
+			.container img {
+				width: 100%;
+				height: auto;
+			}
 				
 			@-webkit-keyframes animateReminder {
 				0%, 100% {
@@ -56,7 +66,7 @@
 					}
 				30%, 70% {
 					width: 400px;
-					height: 330px;
+					height: 230px;
 					}
 				}
 		</style>		
@@ -68,12 +78,15 @@
 			</div>
 
 			<div id="reminderContent">
-				<image id="twitchLogo" src="images\logogu.png">
+				<image id="twitchLogo" src="images\logo2.png">
 				<div="reminderContentText">
 					<span>
-						Like what you see in the stream?<br>
-						Donate Some Gameunits : <br>
-					<div id="qrcode"></div>
+						Like what you see in the stream ?<br>
+						Donate Some Gameunits : <br><br>
+						<center><div class="container">
+						<div id="qrcode"></div>
+						</div></center>
+
 					<script type="text/javascript">
 						new QRCode(document.getElementById("qrcode"), "UXWdMCbXjo4h3XSsfD7pq1zm8szhesDJh5");
 					</script>
