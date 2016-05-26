@@ -1,0 +1,85 @@
+<html>
+	<head>
+	    <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/qrcode.js"></script>
+		<title>Gameunits Donation Panels</title>
+		<meta http-equiv="refresh" content="30">
+		<style>
+			@font-face {
+				font-family: 'Dolce Vita';
+				src: url('fonts/Dolce Vita.ttf');
+				}
+			#reminderContainer {
+				width: 0px;
+				height: 0px;
+				background: #2e5794;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				overflow: hidden;
+				color: white;
+				font-family: 'Dolce Vita';
+				-webkit-box-shadow: 0px 0px 20px #0f3369;
+				-webkit-animation: animateReminder 30s 0s 15;
+				}
+			#reminderHeader {
+				width: 400px;
+				height: 26px;
+				background: #0f3369;
+				position: relative;
+				overflow: hidden;
+				text-align: center;
+				font-size: 24px;
+				}
+			#reminderContent {
+				width: 800px;
+				height: 940px;
+				background: #2e5794;
+				position: relative;
+				overflow: hidden;
+				color: white;
+				}
+			#twitchLogo {
+				width: 90px;
+				height: 90px;
+				float: left;
+				}
+				
+			@-webkit-keyframes animateReminder {
+				0%, 100% {
+					width: 0px;
+					height: 24px;
+					}
+				20%, 80% {
+					width: 400px;
+					height: 24px;
+					}
+				30%, 70% {
+					width: 400px;
+					height: 330px;
+					}
+				}
+		</style>		
+	</head>
+	<body>
+		<div id="reminderContainer">
+			<div id="reminderHeader">
+				<span>Reminder:</span>
+			</div>
+
+			<div id="reminderContent">
+				<image id="twitchLogo" src="images\logogu.png">
+				<div="reminderContentText">
+					<span>
+						Like what you see in the stream?<br>
+						Donate Some Gameunits : <br>
+					<div id="qrcode"></div>
+					<script type="text/javascript">
+						new QRCode(document.getElementById("qrcode"), "UXWdMCbXjo4h3XSsfD7pq1zm8szhesDJh5");
+					</script>
+					</span>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
